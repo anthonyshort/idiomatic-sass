@@ -175,6 +175,7 @@ Here is an example of a well-formed selector:
 
 ## Mixins
 
+* Mixins should only be used when there are dynamic properties, otherwise use `@extend`
 * Mixins that output selectors should be capital-case: `@mixin GridBuilder`
 * Mixins that output only properties should be camel-case: `@mixin borderBox`
 * Mixins should be prefixed if they are part of a public module: `@mixin as-GridBuilder`
