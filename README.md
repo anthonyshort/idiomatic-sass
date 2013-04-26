@@ -12,60 +12,24 @@ bit of overlap.
 
 ## Table of Contents
 
-1. [Definitions](#definitions)
-2. [Object-Oriented Sass](#oosass)
-3. [Naming Conventions](#naming-conventions)
-4. [Selectors](#selectors)
-5. [Properties](#properties)
+1. [Object-Oriented Sass](#oosass)
+2. [Naming Conventions](#naming-conventions)
+3. [Selectors](#selectors)
+4. [Properties](#properties)
    * [Ordering](#ordering)
-6. [Nesting](#nesting)
-7. [Indentation](#indentation)
-8. [File Structure](#file-structure)
-9. [Functions](#functions)
-10. [Mixins](#mixins)
-11. [Modules](#modulespackages)
+5. [Nesting](#nesting)
+6. [Indentation](#indentation)
+7. [File Structure](#file-structure)
+8. [Functions](#functions)
+9. [Mixins](#mixins)
+10. [Modules](#modulespackages)
    * [File Structure](#file-structure-1)
    * [Namespacing](#namespacing)
    * [Module Entry Point](#module-entry-point)
    * [Package Management](#package-management)
    * [Load Paths](#load-paths)
    * [Dependencies](#dependencies)
-
-## Definitions
-
-#### Object
-
-A single piece of the design, usually fairly small. This could be things like `.message`, `.block`, `.list`, `.post`.
-Objects should be independent. Think of them as lego blocks. Objects have "modifiers" and "children".
-
-#### Children
-
-If an "object" is the parent, any sub-parts of that object are considered its children. Children are only ever
-controlled by the object it belongs to. A `.message` object may have a title that it styles, `.message__title`,
-this would be referred to as a child element. 
-
-#### Module
-
-A single piece of functionality that can be composed of CSS, mixins, functions and assets (such as images or fonts).
-A module has a single entry point and a single purpose and role. eg. A grid framework could be a module.
-
-#### Package
-
-When a module is shared with others via a package manager like Bower it will generally be referred to as a package.
-This means that the term "module" and "packages" are fairly interchangable.
-
-#### Block
-
-This is another term for the concept of an "object".
-
-#### Element
-
-When referring to "objects" and "blocks", the word "element" is interchangable with the word "children".
-
-#### Modifier
-
-"Objects" may be modified in a way that changes their style in small ways, think of them as themes or alternative
-styles. For example, a `.list` object may have a `.list--small` modifier to make the text smaller.
+11. [Definitions](#definitions)
 
 ## Object-Oriented Sass
 
@@ -304,3 +268,40 @@ For example, a `Grid` package depends on a `Clearfix` package, but so does the `
 of these packages can `@import "clearfix/index"` without fear that there will be two `.clearfix` classes in the output.
 
 It is assumed that the `components` directory is added as a load path, so packages can easily require their dependencies.
+
+
+## Definitions
+
+#### Object
+
+A single piece of the design, usually fairly small. This could be things like `.message`, `.block`, `.list`, `.post`.
+Objects should be independent. Think of them as lego blocks. Objects have "modifiers" and "children".
+
+#### Children
+
+If an "object" is the parent, any sub-parts of that object are considered its children. Children are only ever
+controlled by the object it belongs to. A `.message` object may have a title that it styles, `.message__title`,
+this would be referred to as a child element. 
+
+#### Module
+
+A single piece of functionality that can be composed of CSS, mixins, functions and assets (such as images or fonts).
+A module has a single entry point and a single purpose and role. eg. A grid framework could be a module.
+
+#### Package
+
+When a module is shared with others via a package manager like Bower it will generally be referred to as a package.
+This means that the term "module" and "packages" are fairly interchangable.
+
+#### Block
+
+This is another term for the concept of an "object".
+
+#### Element
+
+When referring to "objects" and "blocks", the word "element" is interchangable with the word "children".
+
+#### Modifier
+
+"Objects" may be modified in a way that changes their style in small ways, think of them as themes or alternative
+styles. For example, a `.list` object may have a `.list--small` modifier to make the text smaller.
