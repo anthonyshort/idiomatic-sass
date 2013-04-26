@@ -123,7 +123,7 @@ to share amongst a team. You should follow the rules from [Idiomatic CSS](https:
 }
 ```
 
-Sass comes with a number of extra declations we need to consider. The order declarations in a selector:
+### Ordering
 
 1. `$variable` should **always** appear at the top. 
 2. `@extend` should always appear before properties. It's like extending a class in Ruby.
