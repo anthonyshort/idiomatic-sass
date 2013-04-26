@@ -244,7 +244,7 @@ are implemented.
 
 A few general rules:
 
-* Every module must have a namespaec
+* Every module must have a namespace
 * Private functions and mixins should be prefixed with a dash: `@mixin -rg-gridUnit`
 * Importing a module should not render any selectors 
 * Mixins/placholders/functions should be able to be imported separately `@import "rg-Grid/mixins"`
