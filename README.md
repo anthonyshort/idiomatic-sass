@@ -13,15 +13,17 @@ bit of overlap.
 ## Table of Contents
 
 1. [Definitions](#definitions)
-2. [OOSass](#oosass)
+2. [Object-Oriented Sass](#oosass)
 3. [Naming Conventions](#naming-conventions)
-4. [Properties](#properties)
+4. [Selectors](#selectors)
+5. [Properties](#properties)
    * [Ordering](#ordering)
-5. [Indentation and Spacing](#indentation-and-spacing)
-6. [File Structure](#file-structure)
-7. [Functions](#functions)
-8. [Mixins](#mixins)
-9. [Modules](#modulespackages)
+6. [Nesting](#nesting)
+7. [Indentation](#indentation)
+8. [File Structure](#file-structure)
+9. [Functions](#functions)
+10. [Mixins](#mixins)
+11. [Modules](#modulespackages)
    * [File Structure](#file-structure-1)
    * [Namespacing](#namespacing)
    * [Module Entry Point](#module-entry-point)
@@ -65,7 +67,7 @@ When referring to "objects" and "blocks", the word "element" is interchangable w
 "Objects" may be modified in a way that changes their style in small ways, think of them as themes or alternative
 styles. For example, a `.list` object may have a `.list--small` modifier to make the text smaller.
 
-## OOSass
+## Object-Oriented Sass
 
 Writing good Sass code starts with correctly dividing and modularizing your objects. It is arguably more
 important than any other aspect of writing CSS.
@@ -101,46 +103,27 @@ I recommend looking at the [BEM](http://bem.info) or [Montage](http://montagejs.
 
 The most important thing is that you pick one as a team and stick with it.
 
+## Selectors
+
+* Use one discrete selector per line in multi-selector rulesets.
+* Quote attribute values in selectors, e.g., input[type="checkbox"].
+* Place the closing brace of a ruleset in the same column as the first character of the ruleset.
+* Separate each ruleset by a blank line.
+* Include a single space before the opening brace of a ruleset.
+* There should be a single line in between variables, at-rules and properties to help make the distinction clear.
+
 ## Properties
 
 Formatting of selectors is important and is the key to making code easy
 to share amongst a team. You should follow the rules from [Idiomatic CSS](https://github.com/necolas/idiomatic-css):
 
-* Use one discrete selector per line in multi-selector rulesets.
-* Include a single space before the opening brace of a ruleset.
 * Include one declaration per line in a declaration block.
 * Use one level of indentation for each declaration.
-* Include a single space after the colon of a declaration.
 * Use lowercase and shorthand hex values, e.g., #aaa.
 * Use single or double quotes consistently. Preference is for double quotes, e.g., content: "".
-* Quote attribute values in selectors, e.g., input[type="checkbox"].
 * Where allowed, avoid specifying units for zero-values, e.g., margin: 0.
-* Include a space after each comma in comma-separated property or function values.
 * Include a semi-colon at the end of the last declaration in a declaration block.
-* Place the closing brace of a ruleset in the same column as the first character of the ruleset.
-* Separate each ruleset by a blank line.
-* There should be a single line in between variables, at-rules and properties to help make the distinction clear.
-* Avoid nested more than 2 deep. This is a sign of bad CSS as selectors become too specific.
-
-```scss
-.selector-1,
-.selector-2,
-.selector-3[type="text"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  display: block;
-  font-family: helvetica, arial, sans-serif;
-  color: #333;
-  background: #fff;
-  background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
-}
-
-.selector-a,
-.selector-b {
-  padding: 10px;
-}
-```
+* Include a space after each comma in comma-separated property or function values.
 
 ### Ordering
 
@@ -157,15 +140,23 @@ The basic rule of thumb is at-rules, properties, then blocks.
 Here is an example of a well-formed selector:
 
 ```scss
-.selector {
+.selector-1,
+.selector-2,
+.selector-3[type="text"]  {
   $bg: blue;
   $fallback: green;
 
   @extend .clearfix;
   @include border-box;
 
-  height: 200px;
-  width: 200px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  font-family: helvetica, arial, sans-serif;
+  color: #333;
+  background: #fff;
+  background: linear-gradient(#fff, rgba(0, 0, 0, 0.8));
 
   @include after {
     position: absolute;
@@ -181,13 +172,14 @@ Here is an example of a well-formed selector:
 }
 ```
 
-## Indentation and Spacing
+## Nesting
+
+* Avoid nested more than 2 deep. This is a sign of bad CSS as selectors become too specific.
+* Rulesets within selectors should be separated by a single line follow the same rules.
+
+## Indentation
 
 * Indentation should be 2 spaces
-* Selectors should be separated by a single line break
-* There should be a single space between the selector and the opening parenthesis
-* Each properties and at-rule should be on it's own line. This allows for better integration with version control.
-* Blocks within selectors should be separated by a single line follow the same rules.
 
 ## File Structure
 
