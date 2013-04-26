@@ -100,6 +100,8 @@ to share amongst a team. You should follow the rules from [Idiomatic CSS](https:
 * Include a semi-colon at the end of the last declaration in a declaration block.
 * Place the closing brace of a ruleset in the same column as the first character of the ruleset.
 * Separate each ruleset by a blank line.
+* There should be a single line in between variables, at-rules and properties to help make the distinction clear.
+* Avoid nested more than 2 deep. This is a sign of bad CSS as selectors become too specific.
 
 ```scss
 .selector-1,
@@ -121,17 +123,15 @@ to share amongst a team. You should follow the rules from [Idiomatic CSS](https:
 }
 ```
 
-Sass comes with a number of extra declations we need to consider:
+Sass comes with a number of extra declations we need to consider. The order declarations in a selector:
 
-* `$variable` should **always** appear at the top. 
-* `@extend` should always appear before properties. It's like extending a class in Ruby.
-* `@include` should appear second. This allows the properties to override the mixins.
-* Properties should appear after this, optionally grouped by type or sorted alphabetically.
-* Mixins with content blocks should appear next. `@include someMixin { properties }`
-* Selectors that target itself. `&.modifier`
-* Child selectors appear last.
-* There should be a single line in between variables, at-rules and properties to help make the distinction clear.
-* Avoid nested more than 2 deep. This is a sign of bad CSS as selectors become too specific.
+1. `$variable` should **always** appear at the top. 
+2. `@extend` should always appear before properties. It's like extending a class in Ruby.
+3. `@include` should appear second. This allows the properties to override the mixins.
+4. Properties should appear after this, optionally grouped by type or sorted alphabetically.
+5. Mixins with content blocks should appear next. `@include someMixin { properties }`
+6. Selectors that target itself. `&.modifier`
+7. Child selectors appear last.
 
 The basic rule of thumb is at-rules, properties, then blocks.
 
