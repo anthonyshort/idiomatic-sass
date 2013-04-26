@@ -1,4 +1,4 @@
-# Principles of Idiomatic Sass
+# Principles of writing idiomatic Sass
 
 While many people think of Sass as just CSS there are many unique challenges that 
 need to be addressed if we want to be able to write the best possible code. In
@@ -9,6 +9,25 @@ In addition to many of these principles you should read [Idiomatic CSS](https://
 and apply standard CSS best-practices along with these. Understanding how to write
 great CSS is the foundation this is built upon. For this reason, there will be a
 bit of overlap.
+
+## Table of Contents
+
+1. [Definitions](#definitions)
+2. [OOSass](#oosass)
+3. [Naming Conventions](#naming-conventions)
+4. [Properties](#properties)
+   * [Ordering](#ordering)
+5. [Indentation and Spacing](#indentation-and-spacing)
+6. [File Structure](#file-structure)
+7. [Functions](#functions)
+8. [Mixins](#mixins)
+9. [Modules](#modulespackages)
+   * [File Structure](#file-structure-1)
+   * [Namespacing](#namespacing)
+   * [Module Entry Point](#module-entry-point)
+   * [Package Management](#package-management)
+   * [Load Paths](#load-paths)
+   * [Dependencies](#dependencies)
 
 ## Definitions
 
