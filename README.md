@@ -60,7 +60,7 @@ Yep, never. You don't need them and they aren't re-usable by nature
 
 This means an object that handles background and border won't control padding and margin. 
 Styles generally fall into a couple of categories: layout, texture, typography. Each object 
-should generally only handle of these. But be pragmatic about it and consider reusablity at all times.
+should generally only handle one of these. But be pragmatic about it and consider reusability at all times.
 
 Enforce these rules by using one of the naming conventions in the next section.
 
