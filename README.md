@@ -36,11 +36,31 @@ bit of overlap.
 Writing good Sass code starts with correctly dividing and modularizing your objects. It is arguably more
 important than any other aspect of writing CSS.
 
-* Break functionality into smaller objects
-* Objects should never manipulate other objects. eg. `.message` would never change the style of a nested object called `.list`. Instead use child selectors like `.message__list` and use both classes in the markup `<div class="list message__list">` or use a modifier `<div class="message"><div class="list list--small"></div></div>`
-* Never, ever use location-based styling. This means a block is never styled different because it is within another block. Objects should have "modifiers" instead of location-related styles `.block--large {}` instead of `#sidebar .block {}`
-* Never use IDs
-* Separate layout from style. This means an object that handles background and border won't control padding and margin. Styles generally fall into a couple of categories: layout, texture, typography. Each object should generally only handle of these. But be pragmatic about it and consider reusablity at all times.
+Well-written Sass is:
+
+### Decoupled
+
+Objects should never manipulate other objects. eg. `.message` would never change the style of a nested object 
+called `.list`. Instead use child selectors like `.message__list` and use both classes in the markup 
+`<div class="list message__list">` or use a modifier `<div class="message"><div class="list list--small"></div></div>`
+
+### Specific
+
+Break functionality into smaller objects. Each object should do one thing and do it well.
+
+### Not location-based
+
+Never, ever use location-based styling. This means a block is never styled different because it is within another block. Objects should have "modifiers" instead of location-related styles `.block--large {}` instead of `#sidebar .block {}`
+
+### Never uses IDs
+
+Yep, never. You don't need them and they aren't re-usable by nature
+
+### Separates layout from style. 
+
+This means an object that handles background and border won't control padding and margin. 
+Styles generally fall into a couple of categories: layout, texture, typography. Each object 
+should generally only handle of these. But be pragmatic about it and consider reusablity at all times.
 
 Enforce these rules by using one of the naming conventions in the next section.
 
