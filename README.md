@@ -94,12 +94,8 @@ The most important thing is that you pick one as a team and stick with it.
 * Place the closing brace of a ruleset in the same column as the first character of the ruleset.
 * Separate each ruleset by a blank line.
 * Include a single space before the opening brace of a ruleset.
-* There should be a single line in between variables, at-rules and properties to help make the distinction clear.
 
 ## Properties
-
-Formatting of selectors is important and is the key to making code easy
-to share amongst a team. You should follow the rules from [Idiomatic CSS](https://github.com/necolas/idiomatic-css):
 
 * Include one declaration per line in a declaration block.
 * Use one level of indentation for each declaration.
@@ -158,8 +154,8 @@ Here is an example of a well-formed selector:
 
 ## Nesting
 
-* Avoid nested more than 2 deep. This is a sign of bad CSS as selectors become too specific.
-* Rulesets within selectors should be separated by a single line follow the same rules.
+* Avoid nesting more than 2 deep. This is a sign of bad CSS as selectors become too specific.
+* Rulesets within selectors should be separated by a single line and follow the same rules as any other selector.
 
 ## Indentation
 
@@ -174,7 +170,7 @@ Here is an example of a well-formed selector:
 ## Functions
 
 * Functions should be prefix with a dash and a namespace: `-rg-columns`
-* The namespace can be dropped if it is a private function: `-columns`
+* The namespace can be dropped if it is a private function: `columns`
 * Functions should be documented using DocBlock or similar.
 
 ## Mixins
@@ -182,7 +178,7 @@ Here is an example of a well-formed selector:
 * Mixins that output selectors should be capital-case: `@mixin GridBuilder`
 * Mixins that output only properties should be camel-case: `@mixin borderBox`
 * Mixins should be prefixed if they are part of a public module: `@mixin as-GridBuilder`
-* Mixins should not be not longer than ~50 lines
+* In general, mixins with logic should not be longer than ~50 lines just like any other programming language
 * Private mixins that are not used outside of the current file should be prefixed with a dash: `@mixin -gridHelper`
 * Avoid using more than 4 parameters. It is a sign that a mixin is too complex. When Sass adds hashes life will be easier.
 * Mixins should be documented
@@ -220,7 +216,7 @@ are implemented.
 
 A few general rules:
 
-* Every module must have a namespace
+* Every module *must* have a namespace
 * Private functions and mixins should be prefixed with a dash: `@mixin -rg-gridUnit`
 * Importing a module should not render any selectors 
 * Mixins/placholders/functions should be able to be imported separately `@import "rg-Grid/mixins"`
@@ -252,8 +248,6 @@ Example structure:
     /functions
   bower.json
   index.scss
-  mixins.scss
-  functions.scss
 ```
 
 ### Namespacing
