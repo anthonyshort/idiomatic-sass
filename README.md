@@ -67,7 +67,7 @@ Enforce these rules by using one of the naming conventions in the next section.
 ## Naming Conventions
 
 It's important that you use a consistent naming convention for your selectors. For this,
-I recommend looking at the [BEM](http://bem.info) or [Montage](http://montagejs.org/docs/Naming-Conventions.html).
+I recommend looking at the [BEM](http://bem.info) or [Montage](http://docs.montagestudio.com/montagejs/naming-conventions.html).
 
 ### BEM
 
