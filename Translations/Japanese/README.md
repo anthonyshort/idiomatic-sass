@@ -6,24 +6,24 @@
 
 ## 目次
 
-1. [オブジェクト指向 Sass  Object-Oriented Sass](#オブジェクト指向-sass-oosass)
-2. [命名規約  Naming Conventions](#命名規則-naming-conventions)
-3. [セレクタ  Selectors](#セレクタ-selectors)
-4. [プロパティ  Properties](#プロパティ-properties)
-   * [順序  Ordering](#順序-ordering)
-5. [ネスト  Nesting](#ネスト-nesting)
-6. [インデント  Indentation](#インデント-indentation)
-7. [ファイル構造  File Structure](#ファイル構造-file-structure)
-8. [関数  Functions](#関数-functions)
-9. [ミックスイン  Mixins](#ミックスイン-mixins)
-10. [モジュール  Modules](#モジュール-modulespackages)
-   * [ファイル構造  File Structure](#ファイル構造-file-structure-1)
-   * [名前空間  Namespacing](#名前空間-namespacing)
-   * [モジュールエントリポイント  Module Entry Point](#モジュールエントリポイント-module-entry-point)
-   * [パッケージマネジメント  Package Management](#パッケージマネジメント-package-management)
-   * [ロードパス  Load Paths](#ロードパス-load-paths)
-   * [依存関係  Dependencies](#依存関係-dependencies)
-11. [定義  Definitions](#定義-definitions)
+1. オブジェクト指向 Sass  Object-Oriented Sass
+2. 命名規約  Naming Conventions
+3. セレクタ  Selectors
+4. プロパティ  Properties
+   * 順序  Ordering
+5. ネスト  Nesting
+6. インデント  Indentation
+7. ファイル構造  File Structure
+8. 関数  Functions
+9. ミックスイン  Mixins
+10. モジュール  Modules
+   * ファイル構造  File Structure
+   * 名前空間  Namespacing
+   * モジュールエントリポイント  Module Entry Point
+   * パッケージマネジメント  Package Management
+   * ロードパス  Load Paths
+   * 依存関係  Dependencies
+11. 定義  Definitions
 
 ## オブジェクト指向 Sass  Object-Oriented Sass
 
